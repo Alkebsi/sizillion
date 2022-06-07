@@ -1,0 +1,375 @@
+<!DOCTYPE>
+<html>
+	<!--The Head Tag-->
+	<head>
+		<!--the title of the page-->
+		<title>SiZillion | Responsiveness Measurer</title>
+		
+		<!--META Tages-->
+		<meta name="description" content="
+		Using this tool, you will be able to test the width and 
+		height of your site by clicking on simple, basic things
+		to get a professional result. Check the responsiveness
+		of your websites easily here.
+		" />
+		
+		<meta name="keywords" content="
+		testing websites, responsive web development, 
+		creating responsive web-pages, mkebsi projects,
+		measuring viewports, testing websites on multiple
+		devices, easy ways to build multiplatform websites
+		"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#001e22"/>
+		
+		<!--LINK Tages-->
+		<link rel="stylesheet" href="../css/RMstyle.css" id="stylesheet" />
+		<link rel="icon" href="../img/logoCubed.png" />
+	</head>
+	
+	<!--the body of the website-->
+	<body onload="Start()">
+		<span id="top"></span>
+		<!--top animated line-->
+		<div class="topLine"></div>
+		
+		<!--The main container-->
+		<div class="mainContainer">
+			<!--this will make the iframe scrollable inside the div-->
+			<div class="frameContainer" width="1440px">
+				<iframe src="../index.html" id="theFrame"></iframe>
+				<!--#frameContainer-->
+			</div>
+			
+			<!-- The main controllers all start here -->
+			<div class="controllers">
+				<p id="viewType">Viewport Type...</p>
+				
+				<!--this will hold all the text inputs-->
+				<div class="textsContainer">
+					<br/>
+					<!--this one is for the main one (the smaller iframe)-->
+					<p class="note textNote">The Main Container</p>
+					<input type="number" class="textInput" id="width" oninput="SetNumWidth()" placeholder="The Width e.i. 360"/>
+					<span class="RMtext" id="RMwidth">px Width&nbsp;</span>
+					<br/>
+					<input type="number" class="textInput" id="height" oninput="SetNumHeight()" placeholder="The Height e.i. 640"/>
+					<span class="RMtext" id="RMheight">px Height</span>
+
+					<br/><br/><br/>
+
+					<!--for the container-->
+					<p class="note textNote">The Secondary Container</p>
+					<input type="number" class="textInput" id="cWidth" oninput="SetNumCWidth()" placeholder="The Width e.i. 360"/>
+					<span class="RMtext" id="Rwidth">px Width&nbsp;</span>
+					<br/>
+					<input type="number" class="textInput" id="cHeight" oninput="SetNumCHeight()" placeholder="The Height e.i. 640"/>
+					<span class="RMtext" id="Rheight">px Height</span>
+					<!--#textsContainer-->
+				</div>
+				<br/><br/><br/>
+
+				<!--this div will contain the width and height sliders-->
+				<div class="slidersContainer">
+					<p class="note textNote" id="slidersTitle">The sliders</p>
+					<input type="range" class="slider" id="widthSlider" oninput="SetWidth()" max="4000" min="195" value="0"/>
+					<input type="range" class="slider" id="heightSlider" oninput="SetHeight()" max="4000" min="136" value="0"/>
+					<!--#slidersContainer-->
+				</div>
+				<!--#controllers-->
+			</div>
+			
+			<!--last buttons-->
+			<button class="subBtn" id="othersBtn" onclick="ButtonsPanelMgr()">Others</button>
+			<button class="reloadBtn" onclick="PageLinkMgr()"><img src="../img/reload.svg" width="100%" alt="reload"/></button>
+			
+			<!--links and information container-->
+			<div class="linksContainer" id="othersPanel">
+				<div class="innerLinksContainer">
+					<button class="link" id="changeFirstInfo" onclick="PanelsOpeningMgr(1)">Change the Page URL</button><br/>
+					<button class="link" id="selectD" onclick="PanelsOpeningMgr(2)">Select a Device</button><br/>
+					<button class="link" id="advancedInfo" onclick="PanelsOpeningMgr(3)">Advanced information</button><br/>
+					<button class="link" id="sizeCon" onclick="PanelsOpeningMgr(4)">Sizes Converter</button><br/>
+					<button class="link" id="toThePage" onclick="PageLink()">Go To Check The Page</button><br/>
+					<!--#linksContainer-->
+				</div>
+			</div>
+			<br/>
+			<!--here are all the pop-up panels-->
+			<div class="panelsContainer">
+				<!--the first panel to add the main info-->
+				<div class="panel" id="firstPanel">
+					<button onclick="PanelsClosingMgr()" class="theX" id="fPX">X</button><br/>
+					<input type="text" id="URL" class="textInput midTxt" onkeydown="OnEnter(1, event)" placeholder="URL (e.g. https://www.example.com)"/>
+					<button onclick="PageLinkMgr()" class="subBtn" id="doneURL" value="submit">Done</button>
+					<!--#firstPanel-->
+				</div>
+				
+				<!--to choose any device from the available ones-->
+				<div class="panel" id="devicesPanel">
+					<button onclick="PanelsClosingMgr()" class="theX" id="dPX">X</button>
+					<br/>
+					
+					<!--the div for the gradient border-->
+					<div id="border-dpan">
+					<!--the scrollable container for the devices-->
+					<div class="devicesMainContainer">
+						<!--watches-->
+						<div class="watches">
+							<button onclick="ChangeDevice(1)" class="deviceBtn">
+								<img src="../img/watch.svg" id="AppleWatch44" class="watch" alt="watch icon"/>
+								<p class="deviceDes" id="Apple44">Apple Watches with 44mm</p>
+							</button>
+							<button onclick="ChangeDevice(2)" class="deviceBtn">
+								<img src="../img/watch.svg" id="AppleWatch40" class="watch" alt="watch icon"/>
+								<p class="deviceDes" id="Apple40">Apple Watches with 40mm</p>
+							</button>
+							<button onclick="ChangeDevice(3)" class="deviceBtn">
+								<img src="../img/watch.svg" id="LG&Sam" class="watch" alt="watch icon"/>
+								<p class="deviceDes" id="LG240">LG Watch W7 & Samsung Galaxy Watch 2018</p>
+							</button>
+							<button onclick="ChangeDevice(4)" class="deviceBtn">
+								<img src="../img/watch.svg" id="HuaweiWatch" class="watch" alt="watch icon"/>
+								<p class="deviceDes" id="HuaweiW2018">Huawei Watch GT 2018</p>
+							</button>
+							<button onclick="ChangeDevice(5)" class="deviceBtn">
+								<img src="../img/watch.svg" id="AsusWatch" class="watch" alt="watch icon"/>
+								<p class="deviceDes" id="AsusZ">Asus Zenwatch 3</p>
+							</button>
+							<button onclick="ChangeDevice(6)" class="deviceBtn">
+								<img src="../img/watch.svg" id="LG&Assus" class="watch" alt="watch icon"/>
+								<p class="deviceDes" id="LGGR">LG G Watch R & Asus Zenwatch 2</p>
+							</button>
+							<!--#watches-->
+						</div>
+						
+						<!--phones-->
+						<div class="phones">
+							<button onclick="ChangeDevice(7)" class="deviceBtn">
+								<img src="../img/phone.svg" id="SamS21" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="SamS21U">Samsung Galaxy S21 Ultra</p>
+							</button>
+							<button onclick="ChangeDevice(8)" class="deviceBtn">
+								<img src="../img/phone.svg" id="iphone21PM" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="AI21PM">Apple iPhone 12 Pro Max</p>
+							</button>
+							<button onclick="ChangeDevice(9)" class="deviceBtn">
+								<img src="../img/phone.svg" id="SamN20" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="SamN20U">Samsung Galaxy Note20 Ultra</p>
+							</button>
+							<button onclick="ChangeDevice(10)" class="deviceBtn">
+								<img src="../img/phone.svg" id="SamS20" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="SamS20U">Samsung Galaxy S20 Ultra</p>
+							</button>
+							<button onclick="ChangeDevice(11)" class="deviceBtn">
+								<img src="../img/phone.svg" id="GoglP5" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="GP5">Google Pixel 5</p>
+							</button>
+							<button onclick="ChangeDevice(12)" class="deviceBtn">
+								<img src="../img/phone.svg" id="XMi10T" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="XM10TP5G">Xiaomi Mi 10T Pro 5G</p>
+							</button>
+							<button onclick="ChangeDevice(13)" class="deviceBtn">
+								<img src="../img/phone.svg" id="HuaweiN7" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="HN7i">Huawei Nova 7i</p>
+							</button>
+							<button onclick="ChangeDevice(14)" class="deviceBtn">
+								<img src="../img/phone.svg" id="One8Pro" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="OP8Pro">OnePlus 8 Pro</p>
+							</button>
+							<button onclick="ChangeDevice(15)" class="deviceBtn">
+								<img src="../img/phone.svg" id="iPhone11Pro" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="AiP11P">Apple iPhone 11 Pro</p>
+							</button>
+							<button onclick="ChangeDevice(16)" class="deviceBtn">
+								<img src="../img/phone.svg" id="HuaweiMeta" class="phone" alt="phone icon"/>
+								<p class="deviceDes" id="HM30Pro">Huawei Mate 30 Pro</p>
+							</button>
+							<!--#phones-->
+						</div>
+						
+						<!--tablets-->
+						<div class="tablets">
+							<button onclick="ChangeDevice(17)" class="deviceBtn">
+								<img src="../img/tablet.svg" id="ApplePadP11" class="tablet" alt="tablet icon"/>
+								<p class="deviceDes" id="AIPP11">Apple iPad Pro 11</p>
+							</button>
+							<button onclick="ChangeDevice(18)" class="deviceBtn">
+								<img src="../img/tablet.svg" id="GooglePC" class="tablet" alt="tablet icon"/>
+								<p class="deviceDes" id="GPC">Google Pixel C</p>
+							</button>
+							<button onclick="ChangeDevice(19)" class="deviceBtn">
+								<img src="../img/tablet.svg" id="ApplePadM31" class="tablet" alt="tablet icon"/>
+								<p class="deviceDes" id="AIPM3">Apple iPad mini 3</p>
+							</button>
+							<button onclick="ChangeDevice(20)" class="deviceBtn">
+								<img src="../img/tablet.svg" id="SamZFold2" class="tablet" alt="tablet icon"/>
+								<p class="deviceDes" id="SGZF2">Samsung Galaxy Z Fold2</p>
+							</button>
+							<button onclick="ChangeDevice(21)" class="deviceBtn">
+								<img src="../img/tablet.svg" id="ApplePadP10.5" class="tablet" alt="tablet icon"/>
+								<p class="deviceDes" id="AIPP10.5">Apple iPad Pro 10.5</p>
+							</button>
+							<!--#tablets-->
+						</div>
+						
+						<!--Laptops-->
+						<div class="laptops">
+							<button onclick="ChangeDevice(22)" class="deviceBtn">
+								<img src="../img/laptop.svg" id="11" class="laptop" alt="laptop icon"/>
+								<p class="deviceDes" id="11">11.3 inches</p>
+							</button>
+							<button onclick="ChangeDevice(23)" class="deviceBtn">
+								<img src="../img/laptop.svg" id="12" class="laptop" alt="laptop icon"/>
+								<p class="deviceDes" id="12I">12.1 inches</p>
+							</button>
+							<button onclick="ChangeDevice(24)" class="deviceBtn">
+								<img src="../img/laptop.svg" id="13" class="laptop" alt="laptop icon"/>
+								<p class="deviceDes" id="13I">13.3 inches</p>
+							</button>
+							<button onclick="ChangeDevice(25)" class="deviceBtn">
+								<img src="../img/laptop.svg" id="15" class="laptop" alt="laptop icon"/>
+								<p class="deviceDes" id="15I">15 inches</p>
+							</button>
+							<button onclick="ChangeDevice(26)" class="deviceBtn">
+								<img src="../img/laptop.svg" id="16" class="laptop" alt="laptop icon"/>
+								<p class="deviceDes" id="16I">16.1 inches</p>
+							</button>
+							<button onclick="ChangeDevice(27)" class="deviceBtn">
+								<img src="../img/laptop.svg" id="17" class="laptop" alt="laptop icon"/>
+								<p class="deviceDes" id="17I">17 inches</p>
+							</button>
+							<!--#laptops-->
+						</div>
+						
+						<br/><br/>
+						
+						<!--Notes & Acknowledgments-->
+						<h3>Some Important Notes</h3>
+						<p id="finalNotes">
+							The laptop sizes are not accurate for technical 
+							issue I run into. However, if you have the Pixel
+							Ratio and Screen Resolution of the screen/device 
+							you want to test, then divide them the Resolution to
+							the Ratio, e.g. 1920 / 2 = 960. The result is what SiZillion
+							will take in the text bar. You can see the Resolution and 
+							the Pixel Ratio of your screen in the Advanced Information 
+							panel, or simply look at the Total Width & Height to see your
+							screens width and/or height.<a href="https://mrkebsi.github.io/contact.html">
+							Contact me</a> if you have any further questions or willing
+							to make a contribution.
+						</p>
+						<br/>
+					<!--#devicesMainContainer-->
+					</div>
+					<!--#border-dpan-->
+					</div>
+					<!--#devicesPanel-->
+				</div>
+				
+				<!--to add some advanced information to the ones you have-->
+				<div class="panel" id="advancedInfoPanel" onmouseover="AInfo()" ontouchstart="AInfo()">
+					<button onclick="PanelsClosingMgr()" class="theX" id="adPX">X</button>
+					<br/>
+					<caption><h2>Advanced Information</h2></caption>
+					<!--this div is specific for small devices like mobiles as overflow in y-axis-->
+					<div class="conFlow">
+						<table id="InfoTable">
+							
+							<!--this will be a horizontal table-->
+							<tr>
+								<th class="tradius twoSpans" colspan="2">This Device's Screen Information</th>
+							</tr>
+							<tr>
+								<th>Total Width</th>
+								<td id="toW">g</td>
+							</tr>
+							<tr>
+								<th>Total Height</th>
+								<td id="toH">g</td>
+							</tr>
+							<tr>
+								<th>Available Width</th>
+								<td id="avilW">g</td>
+							</tr>
+							<tr>
+								<th>Available Height</th>
+								<td id="avilH">g</td>
+							</tr>
+							<tr>
+								<th>Pixels Ratio</th>
+								<td id="pixRat">g</td>
+							</tr>
+							<tr>
+								<th>Resolution Width</th>
+								<td id="resW">g</td>
+							</tr>
+							<tr>
+								<th>Resolution Height</th>
+								<td id="resH">g</td>
+							</tr>
+							<tr>
+								<th>Color Resolution</th>
+								<td id="colR">g</td>
+							</tr>
+							<tr>
+								<th>Color Depth</th>
+								<td id="colD">g</td>
+							</tr>
+							<tr>
+								<th colspan="2" class="twoSpans">Browser Information</th>
+							</tr>
+							<tr>
+								<th>Browser CodeName</th>
+								<td id="bCodeN">g</td>
+							</tr>
+							<tr>
+								<th>Browser Name</th>
+								<td id="bName">g</td>
+							</tr>
+							<tr>
+								<th>Browser Version</th>
+								<td id="bVersion">g</td>
+							</tr>
+							<tr>
+								<th>Network Connections Type</th>
+								<td id="bOnline">g</td>
+							</tr>
+							<tr>
+								<th class="bradius">User Agent</th>
+								<td class="bradius" id ="uAgent">g</td>
+							</tr>
+						</table>
+						<!--#conFlow-->
+					</div>
+					<!--#advancedInfoPanel-->
+				</div>
+				<!--#panelsContainer-->
+			</div>
+			
+			<!--the Converter Panel-->
+			<div class="panel" id="converterPanel">
+				<!--this div is specific for small devices like mobiles as overflow in y-axis-->
+				<div class="conFlow">
+					<button onclick="PanelsClosingMgr()" class="theX" id="adPX">X</button>
+					<br/><br/>
+					<p class="note conNote">Inches</p>
+					<input type="number" oninput="In2PxConvert(1)" class="textInput midTxt" id="inches" placeholder="e.g. 32"/>
+					<br/>
+					<p class="note conNote">Pixels</p>
+					<input type="number" oninput="In2PxConvert(2)" class="textInput midTxt" id="pixels" placeholder="e.g. 3072"/>
+					<br/>
+					<p class="note conNote">Centimeters</p>
+					<input type="number" oninput="In2PxConvert(3)" class="textInput midTxt" id="cm" placeholder="e.g. 81.28"/>
+					<!--#conFlow-->
+				</div>
+				<!--#converterPanel-->
+			</div>
+			<!--#mainContainer-->
+		</div>
+		
+		<!--the Javascript connector tag-->
+		<script src="../js/Controller.js"></script>
+	</body>
+</html> 
