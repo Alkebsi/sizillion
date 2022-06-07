@@ -1,5 +1,5 @@
 # SiZillion
-![](finalResult.png)
+![](https://github.com/MrKebsi/SiZillion/blob/fdca42cd20f536cc46553b1474d35fec7ede45af/img/finalResult.png)
 
 #### Demo Video: Coming soon
 
