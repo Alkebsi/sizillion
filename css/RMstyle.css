@@ -1,0 +1,497 @@
+/*
+General site styling
+
+importing animations file 
+*/
+@import url("animations.css");
+
+
+/*
+Site Colors
+*/
+:root
+{
+	--aq: #4fe3c3;
+	--aq2: #91eeda;
+	--dp: #5c00c4;
+	--lp: #af00bb;
+	--lp2: #f566ff;
+	--lg: #3a3a3a;
+	--dg: #101010;
+}
+
+/*Hyperlinks*/
+a
+{
+	text-decoration: none;
+	color: var(--aq);
+	line-height: 1.4;
+}
+a.active, a:hover
+{
+	color: var(--lp); 
+}
+
+/*Fonts*/
+@font-face
+{
+	font-family: light;
+	src: url("../fonts/Cairo-Light.ttf");
+}
+@font-face
+{
+	font-family: bold;
+	src: url("../fonts/Stanley.ttf");
+}
+
+/*Everything*/
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: light;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+/*The Body*/
+body
+{
+	background: var(--dg);
+	color: #fff;
+}
+
+/*Main Titles*/
+h1, h2, h3, h4, h5, h6, .bold, b
+{
+	font-family: bold;
+	background-image: linear-gradient(to bottom right, var(--lp2), var(--aq2), var(--lp2));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 4px;
+	text-transform: capitalize; 
+}
+
+/*Paragraphs*/
+p
+{
+	line-height: 1.3em;
+}
+
+/*top animated line*/
+.topLine
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to left, var(--aq), var(--dp), var(--dg), var(--dp), var(--aq));
+	background-position: 0 0;
+	animation: topLineAnim 2s ease-out infinite; 
+	z-index: 99;
+}
+
+/*the iframe and all its needs*/
+.frameContainer
+{
+	height: 90%;
+	padding: 3px;
+	margin: 5px auto;
+	overflow-y: scroll;
+	border: 1px solid var(--aq);
+	border-radius: 5px;
+	dysplay: block;
+	background-image: linear-gradient(to top right, #001e22 50%, var(--aq2), #001e22 60%);
+	background-size: 200% 200%;
+	background-position: 120% 0;
+	animation: backAnim 2s ease-out infinite;
+}
+.frameContainer:hover
+{
+	animation: backAnim 0.5s ease-out infinite;
+}
+#theFrame
+{
+	background: #fff;
+	border: 1px solid var(--lp2);
+	border-radius: 5px;
+}
+
+/*The main padding of the controllers*/
+.controllers
+{
+	padding: 0 25%;	
+}
+
+/*texts describing the inputs*/
+.textNote
+{
+	width: 60%;
+	text-align: center;
+	display: block;
+	margin: 0 auto -6px;
+	padding: 10px;
+	border-style: solid;
+	border-color: var(--aq); 
+	border-width: 3px 10px 1px 10px;
+	border-radius: 30px 30px 0 0;
+}
+#slidersTitle 
+{
+	margin-bottom: -20px;
+}
+#viewType
+{
+	position: relative;
+	display: block;
+	margin: -6px auto 0;
+	width: 200px;
+	border-style: solid;
+	border-color: var(--aq); 
+	border-width: 1px 10px 3px 10px;
+	border-radius: 0 0 30px 30px;
+	text-align: center;
+	padding: 10px 5px;
+	z-index: -1;
+	font-wight: bold;
+	color: var(--aq2);
+}
+.conNote
+{
+	border: 3px solid var(--aq);
+	border-radius: 20px 20px 0 0;
+	color: var(--aq2);
+	width: 40%;
+	margin: 0 auto -10px;
+	padding: 10px 0;
+}
+
+/*text inputs*/
+.textInput
+{
+	width: 80%;
+	border: 1px solid var(--aq);
+	border-radius: 20px;
+	padding: 5px;
+	margin: 5px;
+	display: block;
+	text-align: center;
+	color: #fff;
+	background-image: linear-gradient(to right, #001e22 45%, var(--aq2), #001e22 65%);
+	background-size: 200% 200%;
+	background-position: 120% 0;
+	animation: backAnim 2.5s ease-out infinite;
+	transition: all 0.4s;
+}
+.textInput:hover, .textInput:focus 
+{
+	animation: backAnim 0.3s ease-out infinite;
+}
+.midTxt
+{
+	margin: 5px auto;
+}
+.RMtext
+{
+	position: absolute; 
+	right: 25%;
+	width: 20%;
+	text-align: right;
+	transform: translate(0, -42px);
+	border: 1px solid var(--aq);
+	border-radius: 20px;
+	padding: 4px 10px;
+	margin: 0;
+	font-size: 0.9em;
+	color: var(--aq2);
+	background: var(--dg);
+}
+::placeholder
+{
+	color: var(--aq2);
+}
+.linksContainer
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 99;
+	top: 0;
+	left: -100%;
+	background: var(--dg);
+	transition: all 0.4s;
+}
+.innerLinksContainer
+{
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	margin: 0 auto;
+}
+
+/*Sliders*/
+.slider
+{
+	-webkit-appearance: none;
+	appearance: none;
+	width: 90%;
+	height: 15px;
+	margin: 20px auto;
+	display:  block;
+	border: 1px solid var(--aq);
+	border-radius: 20px;
+	background-image: linear-gradient(20deg, #001e22 45%, var(--aq2), #001e22 65%);
+	background-size: 200% 200%;
+	background-position: 120% 0;
+	animation: backAnim 2.5s ease-out infinite;
+}
+.slider:hover
+{
+	animation: backAnim 0.3s ease-out infinite;
+}
+.slider::-webkit-slider-thumb
+{
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 1px solid var(--aq2);
+	background: #001e22; 
+}
+.slider::-moz-range-thumb
+{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 1px solid var(--aq2);
+	background: #001e22; 
+}
+
+/*Buttons*/
+.reloadBtn
+{
+	display: block;
+	margin: 25px auto;
+	width: 50px; 
+	background: none;
+	border: none;
+}
+.subBtn
+{
+	width: 25%;
+	display: block; 
+	margin: -20px auto 0; 
+	padding: 10px 20px 10px 10px;
+	border-top: 1px solid var(--aq);
+	border-bottom: 3px solid var(--aq);
+	border-left: 10px solid var(--aq);
+	border-right: 10px solid var(--aq);
+	border-radius: 0 0 30px 30px;
+	background: none;
+	color: var(--aq);
+	font-weight: bold; 
+	transition: all 0.4s;
+}
+.link
+{
+	width: 100%; 
+	margin: -10px auto;
+	padding: 5px 5px 5px 20px;
+	display: block;
+	background: #001e22; 
+	border: 1px solid var(--aq2);
+	border-radius: 20px;
+	color: var(--aq2);
+	transition: all 0.4s;
+	cursor: pointer;
+}
+.link:hover
+{
+	border-radius: 0;
+	color: #001e22;
+	transform: translate(10px, 0);
+	background: var(--aq2);
+}
+.subBtn:hover {
+	border-radius: 0;
+	color: #001e22;
+	transform: translate(0, 10px);
+	background: var(--aq2);
+}
+#doneURL
+{
+	color: #001e22; 
+	background: var(--aq);
+	margin-top: -6px;
+	padding: 5px;
+}
+
+/*panels styling*/
+.panel
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 140%;
+	background: var(--dg);
+	z-index: 98;
+	transition: all 0.4s;
+	transform: translate(-100%, 0);
+	padding: 20px;
+	text-align: center;
+}
+.theX
+{
+	position: absolute;
+	left: 15;
+	top: 15;
+	width: 30px;
+	height: 30px;
+	color: var(--aq);
+	border: 1px solid var(--aq);
+	border-radius: 50%;
+	background: none;
+	transition: all 0.4s;
+}
+.theX:hover {
+	background: var(--aq);
+	color: var(--dg);
+}
+#devicesPanel
+{
+	padding: 10px;
+}
+#border-dpan
+{
+	display: block; 
+	width: 70%;
+	background: linear-gradient(45deg, var(--aq), var(--lp2), var(--aq));
+	padding: 0 2px;
+	border-radius: 20px;
+	margin: 20px auto 0;
+}
+.devicesMainContainer
+{
+	overflow-y: auto;
+	height: 60%;
+	width: 100%;
+	background: var(--dg);
+	padding: 9px;
+	border-radius: 20px;
+}
+
+/*Devices*/
+.deviceBtn
+{
+	width: 150px;
+	background: none;
+	color: var(--aq2);
+	padding: 10px;
+	margin: 10px 0px;
+	border: 1px solid var(--aq2);
+	border-radius: 6px;
+	transition: all 0.4s;
+}
+.deviceBtn:hover
+{
+	background: #000;
+	border-radius: 0;
+}
+.deviceBtn img
+{
+	width: 100%;
+}
+.watches, .phones, .tablets, .laptops, .monitors
+{
+	display: inline; 
+}
+#finalNotes
+{
+	padding: 5px;
+	color: var(--aq);
+}
+.conFlow
+{
+	overflow: auto;
+	height: 60%;
+}
+
+/*the advanced Information table*/
+#infoTable
+{
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	background-image: linear-gradient(45deg, var(--aq), var(--lp), var(--aq));
+	border-radius: 20px;
+	padding: 5px;
+}
+#infoTable tr
+{
+	background: var(--dg);
+}
+#infoTable th
+{
+	text-align: left;
+	padding: 10px;
+	width: 50%;
+	color: var(--aq2); 
+}
+#infoTable td
+{
+	text-align: right;
+	padding: 10px;
+	color: var(--aq2);
+}
+.tradius
+{
+	border-radius: 20px 20px 0 0;
+}
+.bradius
+{
+	border-radius: 0 0 20px 20px;
+}
+#infoTable .twoSpans 
+{
+	text-align: center;
+	padding: 20px;
+	font-size: 1.5em;
+	background-image: linear-gradient(45deg, var(--lp2) 40%, var(--aq2) 60%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 900px)
+{
+	.controllers
+	{
+		padding: 5px;
+	}
+	#viewType
+	{
+		margin-top: -10px;
+	}
+	.RMtext
+	{
+		right: 5px;
+		width: 30%;
+		padding: 4px 5px;
+	}
+	.subBtn
+	{
+		width: 50%;
+		margin-top: -25px;
+	}
+	#border-dpan, #infoTable, .innerLinksContainer
+	{
+		width: 98%;
+	}
+}

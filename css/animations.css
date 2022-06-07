@@ -1,0 +1,26 @@
+/*
+
+This file will hold all the animations and key frames
+for this Website excluding the animations activated
+by the property "Transition".
+
+*/
+
+/*this animation is for the top loading line*/
+@keyframes topLineAnim
+{
+	0%{background-position: 0 0;}
+	100%{background-position: 100vw 0;}
+}
+
+/*this one is for the background of the testing page*/
+@keyframes backAnim
+{
+	0%{background-position: 0 60%;}
+	100%{background-position: 140% 0;}
+}
+@keyframes waves-anim
+{
+	0% {transform: translate3d(-90px,0,0)}
+	100% {transform: translate3d(85px,0,0)}
+}

@@ -1,0 +1,258 @@
+/*
+This file contain the Dark theme of the site as the main
+theme.
+
+The Colors Used In This Project Are...
+
+- Aqua - rgb(80, 228, 196) - #4fe3c3 aq,
+- Dark Purple - rgb(92, 0, 196) - #5c00c4 dp,
+- Light Purple - rgb(175, 0, 187) - #af00bb lp,
+- Light Gray - rgb(58, 58, 58) - #3a3a3a lg,
+- Dark Gray - rgb(16. 16, 16) - #101010 dg, and
+- Black - rgb(0, 0, 0) - #000000 black.
+*/
+
+/* Files importation */
+@import url("animations.css");
+
+/*
+General site styling
+
+Site Colors
+*/
+:root
+{
+	--aq: #4fe3c3;
+	--aq2: #91eeda;
+	--dp: #5c00c4;
+	--lp: #af00bb;
+	--lp2: #f566ff;
+	--lg: #3a3a3a;
+	--dg: #101010;
+}
+
+/*Hyperlinks*/
+a
+{
+	text-decoration: none;
+	color: var(--aq);
+	line-height: 1.4;
+}
+a.active, a:hover
+{
+	color: var(--lp); 
+}
+
+/*Fonts*/
+@font-face
+{
+	font-family: light;
+	src: url("../fonts/Cairo-Light.ttf");
+}
+@font-face
+{
+	font-family: bold;
+	src: url("../fonts/Stanley.ttf");
+}
+
+/*Everything*/
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: light;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+/*The Body*/
+body
+{
+	background: var(--dg);
+	color: #fff;
+}
+
+/*Main Titles*/
+h1, h2, h3, h4, h5, h6, .bold, b
+{
+	font-family: bold;
+	background-image: linear-gradient(to bottom right, var(--lp2), var(--aq2), var(--lp2));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 4px;
+	text-transform: capitalize; 
+}
+
+/*Paragraphs*/
+p
+{
+	text-align: center; 
+	padding: 0 25%;
+}
+
+/*top animated line*/
+.topLine
+{
+	z-index: 99;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to left, var(--aq), var(--dp), var(--dg), var(--dp), var(--aq));
+	background-position: 0 0;
+	animation: topLineAnim 2s ease-out infinite; 
+}
+
+/*Index Page Styles*/
+.content
+{
+	margin: 100px 0;
+}
+.first
+{
+	padding: 0 20px;
+	background: #fff0;
+	height: 40vw;
+}
+.firstImg
+{
+	position: relative; 
+	right: 2.5vw;
+	width: 40vw;
+	margin: 30px auto;
+	display: block;
+	float: right;
+}
+.titleNo1
+{
+	position: relative;
+	top: 50%;
+	left: 2.5vw;
+	transform: translate(0, -50%);
+	width: 40vw;
+	display: block;
+}
+.waves
+{
+	position: relative;
+	width: 100%;
+	height: 15vh;
+	margin-bottom: -15px;
+	min-height: 100px;
+	max-height: 150px;
+}
+.waves-opp
+{
+	transform: scaleY(-1);
+	margin-top: -5px;
+}
+.waves *
+{
+	transition: all 0s;
+}
+.parallax > use
+{
+	animation: waves-anim 2s linear infinite;
+	transition: all 0s;
+}
+.parallax > use:nth-child(1)
+{
+	animation-delay: -1s;
+	animation-duration: 1.5s;
+}
+.parallax > use:nth-child(2)
+{
+	animation-delay: -2s;
+	animation-duration: 1.6s;
+}
+.parallax > use:nth-child(3)
+{
+	animation-delay: -3s;
+	animation-duration: 1.7s;
+}
+.parallax > use:nth-child(4)
+{
+	animation-delay: -4s;
+	animation-duration: 1.8s;
+}
+.startBtn
+{
+	display: block;
+	width: 50%;
+	padding: 20px; 
+	text-align: center;
+	margin: 30px auto; 
+	background: none;
+	border: 2px solid var(--aq);
+	color: var(--aq);
+	border-radius: 20px 0;
+	font-size: 1.5em;
+	transition: all 1s;
+}
+.startBtn:hover
+{
+	background: var(--aq);
+	border: 2px solid var(--aq2);
+	color: var(--dg);
+	border-radius: 0;
+}
+.copyrights
+{
+	background: linear-gradient(var(--dg) 4%, #001e22 20%);
+}
+.copyrights p
+{
+	padding: 5px 20px;
+	background: none;
+	color: #fff;
+	border-radius: 0;
+	border: 0;
+	box-shadow: none;
+}
+.cDate
+{
+	font-size: 3em;
+}
+#wmark
+{
+	width: 25%;
+	display: block;
+	margin: auto;
+}
+@media screen and (max-width: 900px)
+{
+	p
+	{
+		padding: 10px;
+	}
+	.first
+	{
+		height: auto;
+	}
+	.firstImg
+	{
+		right: 0;
+		width: 100%;
+		margin: 10px auto;
+		float: none;
+	}
+	.titleNo1
+	{
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: translate(0, 0);
+		width: 100%;
+	}
+	.waves
+	{
+		height: 40px;
+		margin-bottom: -10px;
+		min-height: 40px;
+	}
+	#wmark
+	{
+		width: 70%;
+	}
+}
