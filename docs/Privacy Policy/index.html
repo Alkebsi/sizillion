@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<!--The Head Tag-->
+	<head>
+		<!--the title of the page-->
+		<title>Privacy Policy - SiZillion</title>
+		
+		<!--META Tages-->
+		<meta name="description" content="
+		***The Main Description Goes Here***
+		" />
+		
+		<meta name="keywords" content="
+		***The Main Keywords Go Here***
+		"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#001e22"/>
+		
+		<!--LINK Tages-->
+		<link rel="stylesheet" href="../css/main.css" id="stylesheet" />
+		<link rel="icon" href="../img/logoCubed.png" />
+	</head>
+	
+	<!--the body of the website-->
+	<body onload="Start()">
+		
+		<!--top animated line-->
+		<div class="topLine"></div>
+		
+		<!--navigation bar-->
+		<div class="navBar">
+			<!--the logo-->
+			<a href="index.html">
+				<img src="../img/Shape1.png" class="navLogo" alt="SiZillion Logo"/>
+			</a>
+			<!--the parts title-->
+			<h2 class="title">Privacy Policy</h2>
+			<!--#navBar-->
+		</div>
+		<!--the three dashes-->
+		<div class="dashes" onclick="RightPanel()">
+			<div class="dash" id="dash1"></div>
+			<div class="dash" id="dash2"></div>
+			<div class="dash" id="dash3"></div>
+			<!--#dashes-->
+		</div>
+		
+		<!--the right panel-->
+		<div class="rpOverlay" id="rpOver" onclick="RightPanel()" onmouseover="RightPanel()" ontouchstart="RightPanel()" ></div>
+		<div class="rightPanel" id="rPanel" ontouchmove="CMoveAnim()" onmousemove="CMoveAnim()" ontouchend="CAnimEnd()" onmouseout="CAnimEnd()">
+			<div class="navLinksCon">
+				<a href="/docs/Tutorials/">Main Concept</a>
+				<a href="/docs/Tutorials/the-full-manual.html">User Manual</a>
+				<a href="/docs/Terms of Use/">Terms of Use</a>
+				<a href="/docs/Privacy Policy/">Privacy Policy</a>
+				<a href="/docs/Contribution/">Contribution Conditions</a>
+				<!--#navLinksCon ends here-->
+			</div>
+			<!--the animated background made by circles-->
+			<svg id="rpBackContainer">
+				<!--stuck circles-->
+				<circle r="200" cy="50" cx="10" style="fill: #ffffff00; stroke: #26a6ee70; stroke-width: 10px;"/>
+				<circle r="200" cy="500" cx="250" style="fill: #ffffff00; stroke: #00db8c70; stroke-width: 10px;"/>
+				<circle r="200" cy="900" cx="10" style="fill: #ffffff00; stroke: #d066f970; stroke-width: 10px;"/>
+				<circle r="200" cy="1400" cx="250" style="fill: #ffffff00; stroke: #83571a70; stroke-width: 10px;"/>
+				
+				<!--animated main circles-->
+				<g id="circlesBack" transform="translate(125, 200) rotate(0)">
+					<circle id="bigC" r="80" cy="0" cx="0"/>
+					<circle id="sc1" r="30" cy="-90" cx="-65"/>
+					<circle id="sc2" r="30" cy="100" cx="50"/>
+					<circle id="sc3" r="30" cy="30" cx="-30"/>
+					<circle id="sc4" r="30" cy="-80" cx="75"/>
+				</g>
+				<!--the gradient-->
+				<defs>
+					<linearGradient id="mainGrad" x1="0" y1="0" x2="100%" y2="100%">
+						<stop offset="0%" style="stop-color: var(--aq2); stop-opacity: 0.5;"/>
+						<stop offset="100%" style="stop-color: var(--lp2); stop-opacity: 0.5;"/>
+					</linearGradient>
+				</defs>
+			</svg>
+			<!--#rightPanel-->
+		</div>
+		
+		<br/><br/>
+		
+		<!--the main article-->
+		<div class="articleOne">
+			<h1 class="secondaryTitle">How I Use Your Personal Information</h1>
+			<br/>
+			<!--Table Of Content-->
+			<div class="toc">
+				<p class="tocH"><b>Table of Content</b></p>
+				<ul>
+					<li><a href="#one">Overview</a></li>
+					<li><a href="#two">We Protect You</a></li>
+					<li><a href="#three">Do I Toke Your Projects?</a></li>
+					<li><a href="#four">Third Party Web-Links</a></li>
+					<li><a href="#five">We May Change the Information Here!</a></li>
+					<li><a href="#six">Conclusion</a></li>
+					<li id="one"><a href="#seven">Contact Details</a></li>
+				</ul>
+			</div>
+			<br/>
+			
+			<h2>Overview</h2>
+			<p>
+				This page is taking mainly about how I take or
+				store your information. Your work, information, 
+				and personal data are important for you, and I
+				really appreciate that. So, I will tell you all about 
+				it below. Please be patient enough to read it all. 
+			</p>
+			<span id="two"></span>
+			
+			<br/><br/><br/>
+			<h2>We Protect You</h2>
+			<p>
+				First of all, I upload this project to 
+				<a href="https://www.github.com" target="_blank">Github</a> 
+				(online or offline). So, to be sure about 
+				<a href="https://www.github.com/Privacy/" target="_blank">
+				Github's Privacy check this page to read 
+				about their rights.</a>
+			</p>
+			<br/>
+			<p>
+				We [content developers] are not allowed to take
+				any sensitive information from you browser (such
+				as credit card numbers, emails, and passwords) 
+				since I only create projects called "
+				<a href="https://www.wikipedia.com/static_websites/" target="_blank">
+				Static Website</a>" which force me not to use anything that 
+				can transfer your data.
+			</p>
+			<br/>
+			<p>
+				Also "Cookies & Caches" are not used in my 
+				projects, so no need to feel worried. The 
+				"Advanced Information" in the app only display
+				your browser's information and not saving or 
+				sharing them. You are the only one who see them.
+			</p>
+			<span id="three"></span>
+			
+			<br/><br/><br/>
+			<h2>Do I Toke Your Projects?</h2>
+			<p>
+				No, I are not. Your projects are something 
+				personal, and you only point to them (whether 
+				you are online or offline) and not uploading them.
+				You are fully protected by me and by 
+				<a href="https://www.github.com" target="_blank">Github</a> .
+			</p>
+			<span id="four"></span>
+			
+			<br/><br/><br/>
+			<h2>Third Party Web-Links</h2>
+			<p>
+				The links in my project are safe, but you may find 
+				an external links pointing to other websites. Those
+				ones are out of my control and I are not
+				responsible of any activities in there. I only make
+				you feel comfortable using my application, and 
+				others may not. So, be careful. 
+			</p>
+			<span id="five"></span>
+			
+			<br/><br/><br/>
+			<h2>We May Change the Information Here!</h2>
+			<p>
+				All the information mentioned here may be changed
+				anytime. I are telling you that to aware you to check 
+				the information online or update your offline files
+				regularly not to be into trouble while reading an old 
+				documents.
+			</p>
+			<br/>
+			<p class="note">
+				NOTE: Sharing this project will help your friends
+				so much and help us, too. So, please be generous
+				to your friends to use my app. I made it free for
+				you, and you can support me by a simple thing, only 
+				a minute sharing and telling your friends about it!
+			</p>
+			<span id="six"></span>
+			
+			<br/><br/><br/>
+			<h2>Conclusion</h2>
+			<p>
+				At the end, I are so glad that you read my efforts
+				with your patience. Thanks for your time and 
+				attention. I hope you will have a great moments 
+				using my project. I will be pleased hearing your
+				feedbacks, ideas, reports, or any thing you are 
+				interested in. You can contact me on the information
+				provided below. 
+			</p>
+			<span id="seven"></span>
+			
+			<br/><br/><br/>
+			<h2>Contact Details</h2>
+			<p>
+				Website: <a href="https://mrkebsi.github.io/">Mrkebsi.github.io</a><br/>
+				E-mail: <a href="mailto: dev.mkebsi@gmail.com">dev.mkebsi@gmail.com</a><br/>
+				Linkedin: <a hrerf="https://linkedin.com/in/mkebsi">https://linkedin.com/in/mkebsi</a><br/>
+				Dribbble: <a href="http://dribbble.com/mkebsi">@MKebsi</a><br/>
+				Github: <a href="https://github.com/mrkebsi">Github.com/MrKebsi</a><br/>
+				Twitter: <a href="https://twitter.com/mrkebsi">@MrKebsi</a><br/>
+				Instagram: <a href="https://instagram.com/mrkebsi">@MrKebsi</a><br/>
+			</p>
+			<!--#articleOne-->
+		</div>
+		
+		<!--the Javascript connector tag-->
+		<script src="../js/main.js"></script>
+	</body>
+</html> 
