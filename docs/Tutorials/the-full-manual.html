@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+	<!--The Head Tag-->
+	<head>
+		<!--the title of the page-->
+		<title>Step-By-Step Guide: Walkthrough SiZillion</title>
+		
+		<!--META Tages-->
+		<meta name="description" content="
+		***The Main Description Goes Here***
+		" />
+		
+		<meta name="keywords" content="
+		***The Main Keywords Go Here***
+		"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#001e22"/>
+		
+		<!--LINK Tages-->
+		<link rel="stylesheet" href="../css/main.css" id="stylesheet" />
+		<link rel="icon" href="../img/logoCubed.png" />
+	</head>
+	
+	<!--the body of the website-->
+	<body onload="Start()">
+		
+		<!--top animated line-->
+		<div class="topLine"></div>
+		
+		<!--navigation bar-->
+		<div class="navBar">
+			<!--the logo-->
+			<a href="index.html">
+				<img src="../img/Shape1.png" class="navLogo" alt="SiZillion Logo"/>
+			</a>
+			<!--the parts title-->
+			<h2 class="title">The Full Manual</h2>
+			<!--#navBar-->
+		</div>
+		<!--the three dashes-->
+		<div class="dashes" onclick="RightPanel()">
+			<div class="dash" id="dash1"></div>
+			<div class="dash" id="dash2"></div>
+			<div class="dash" id="dash3"></div>
+			<!--#dashes-->
+		</div>
+		
+		<!--the right panel-->
+		<div class="rpOverlay" id="rpOver" onclick="RightPanel()" onmouseover="RightPanel()" ontouchstart="RightPanel()" ></div>
+		<div class="rightPanel" id="rPanel" ontouchmove="CMoveAnim()" onmousemove="CMoveAnim()" ontouchend="CAnimEnd()" onmouseout="CAnimEnd()">
+			<div class="navLinksCon">
+				<a href="/docs/Tutorials/">Main Concept</a>
+				<a href="/docs/Tutorials/the-full-manual.html">User Manual</a>
+				<a href="/docs/Terms of Use/">Terms of Use</a>
+				<a href="/docs/Privacy Policy/">Privacy Policy</a>
+				<a href="/docs/Contribution/">Contribution Conditions</a>
+				<!--#navLinksCon ends here-->
+			</div>
+			<!--the animated background made by circles-->
+			<svg id="rpBackContainer">
+				<!--stuck circles-->
+				<circle r="200" cy="50" cx="10" style="fill: #ffffff00; stroke: #26a6ee70; stroke-width: 10px;"/>
+				<circle r="200" cy="500" cx="250" style="fill: #ffffff00; stroke: #00db8c70; stroke-width: 10px;"/>
+				<circle r="200" cy="900" cx="10" style="fill: #ffffff00; stroke: #d066f970; stroke-width: 10px;"/>
+				<circle r="200" cy="1400" cx="250" style="fill: #ffffff00; stroke: #83571a70; stroke-width: 10px;"/>
+				
+				<!--animated main circles-->
+				<g id="circlesBack" transform="translate(125, 200) rotate(0)">
+					<circle id="bigC" r="80" cy="0" cx="0"/>
+					<circle id="sc1" r="30" cy="-90" cx="-65"/>
+					<circle id="sc2" r="30" cy="100" cx="50"/>
+					<circle id="sc3" r="30" cy="30" cx="-30"/>
+					<circle id="sc4" r="30" cy="-80" cx="75"/>
+				</g>
+				<!--the gradient-->
+				<defs>
+					<linearGradient id="mainGrad" x1="0" y1="0" x2="100%" y2="100%">
+						<stop offset="0%" style="stop-color: var(--aq2); stop-opacity: 0.5;"/>
+						<stop offset="100%" style="stop-color: var(--lp2); stop-opacity: 0.5;"/>
+					</linearGradient>
+				</defs>
+			</svg>
+			<!--#rightPanel-->
+		</div>
+		
+		<br/><br/>
+		
+		<!--the main article-->
+		<div class="articleOne">
+			<h1 class="secondaryTitle">Step-By-Step Guide Through SiZillion</h1>
+			<br/>
+			<!--Table Of Content-->
+			<div class="toc">
+				<p class="tocH"><b>Table of Content</b></p>
+				<ul>
+					<li><a href="#one">Overview</a></li>
+					<li><a href="#two">How It Works?</a></li>
+					<li><a href="#three">Step-By-Step Guid</a></li>
+					<li><a href="#four">Step 1: Adding the URL</a></li>
+					<li><a href="#five">Step 2: The Viewer</a></li>
+					<li><a href="#six">Step 3: Resizing and Testing</a></li>
+					<li><a href="#seven">The Main Buttons</a></li>
+					<li id="one"><a href="#eight">Conclusion</a></li>
+				</ul>
+			</div>
+			<br/>
+			<h2>Overview</h2>
+			<p>
+				In this article, you will learn nearly every thing you need
+				to know about SiZillion. It will start explaining some of
+				the app fundamentals. Then it will go a little deeper with
+				the main panels, text inputs, and buttons. After that, it
+				will describe the advanced or extra things in the site.
+			</p>
+			<br/>
+			<p class="note">
+				Note: the images were taken from an older version.
+				Anyhow, all the texts remain the same;
+			</p>
+			<br/>
+			<p>
+				This single page would be enough to teach everything 
+				in SiZillion. After reading this article, you will understand
+				how it works and what should it does for you. You may
+				encounter some troubles around the app, so feel free
+				to tell me about it. If you are a developer, you can contribute
+				on the project at github, but read the 
+				<a href="Contribution & Open-source License/index.html">
+				Contribution Conditions</a> from here.
+			</p>
+			<span id="two"></span>
+			
+			<br/><br/><br/>
+			<h2>How It Works?</h2>
+			<p>
+				SiZillion is a full static website that works with only
+				HTML, CSS, and Javascript. It means that nothing
+				will be uploaded to the server. Some developers
+				use Node.js (A language that uses Javascript to
+				upload information to the server), but this one
+				doesn't. This also means that you can download it
+				from github and never bring another thing (such 
+				as website servers known as "Localhost" or installing
+				python). It will directly work with from the browser.
+			</p>
+			<br/>
+			<p>
+				SiZillion works on taking your web-page temporarily 
+				to test it in the top panel. It accepts offline, but this
+				doesn't mean I will upload you files. Everything
+				will be save with you. In addition, you can check
+				the <a href="../Privacy Policy/index.html">Privacy
+				Policy</a> page for more information about your 
+				personal privacy, and how I protect you.
+			</p>
+			<br/>
+			<p>
+				This app works on your file using something called
+				"iframe" which holds your page. Then you can use
+				the sliders or the text inputs to control the width
+				(wideness) of the iframe to be like the screens
+				available in the world. Not only the width of the 
+				screens, but also the height (tallness) of the screen.
+				This means that you will be able to test your web-page 
+				and make it fully responsive.
+			</p>
+			<span id="three"></span>
+			
+			<br/><br/><br/>
+			<h2>From Where to Start? Step-By-Step</h2>
+			<p>
+				The step-by-step guide will go through the app from
+				the first time you open it until the moment you test your
+				page professionally. You will find everything provided 
+				well at this page, so go with it step by step until the end,
+				and you you feel comfortable using SiZillion.
+			</p>
+			<span id="four"></span>
+			
+			<br/><br/><br/>
+			<h3>Step 1: Adding the Page URL</h3>
+			<img src="../img/TutImg1.jpg" width="100%" id="fig1"/>
+			<p class="figsTxt">Figure 1</p><br/>
+			
+			<p>
+				By looking at <a href="#fig1">Figure 1</a>, 
+				you will notice that you have to add a URL.
+				The URLs are the ones used to direct the 
+				browser to your website. There are many 
+				types of URLs and the most common ones
+				are mentioned below.
+			</p>
+			<ul>
+				<li>
+					HTTP/HTTPS sites: those are the most 
+					common ones that you may use. They 
+					are used with "www" sites uploaded at
+					a server in the network. It will look something
+					like this "https://www.google.com/index.html",
+				</li>
+				<li>
+					File sites: those are also common examples
+					with you developers. This kind of websites are
+					the ones saved in your storage. Mostly they
+					are static websites and made with HTML, CSS,
+					and Javascript. It will look something like this 
+					"C:\User\Desktop\index.html" or
+					"file:///sdcard/TheLocation/index.html"
+					for mobiles,
+				</li>
+				<li>
+					Localhost sites: this kind is somehow used by
+					less common people. This one is made by 
+					something called offline hosts or self servers. 
+					It allows back-end developers to test their sites 
+					offline. It usually uses files like php and asp to 
+					make the static sites become dynamic ones. 
+					It mostly looks something like this 
+					"localhost:8080/index.php", and
+				</li>
+				<li>
+					IP sites: this one is mostly not common and you
+					may never need. They are the ones provided by 
+					a server (online or offline) and didn't give an 
+					explanation to the browser. It works will, but the
+					only problem that it doesn't have a readable URL. 
+					It should look like this 
+					"192.168.14.7:8080/index.html" or 
+					"174.250.140.1:3333/index.asp".
+				</li>
+			</ul>
+			<p class="note">
+				NOTE: take care of making mistakes with
+				writing the URL like forgiving adding the
+				colon ":" after http or never adding the dots
+				before the com or after the www.
+			</p>
+			<br/>
+			<p>
+				All types of url mentioned are allowed to
+				be used, but the file extension wasn't really
+				clarified, so some are allowed, but the others aren't.
+			</p>
+			<br/>
+			<p>Allowed once are...</p>
+			<ul>
+				<li>HTML,</li>
+				<li>SVG, JPG, PNG etc will appear with a white background as default color,</li>
+				<li>PHP, but only with the host(offline or online), and</li>
+				<li>AMP web pages.</li>
+			</ul>
+			<p>And some are not allowed such as...</p>
+			<ul>
+				<li>JS file alone,</li>
+				<li>CSS file alone, or</li>
+				<li>Any other file that only appear white in the main container.</li>
+			</ul>
+			<p>
+				If you need to enter a URL, just go to the browser's
+				top bar and copy what is in there and paste it in 
+				SiZillion. All should work well. If you got any trouble,
+				you can report it to 
+				<a href="mailto:dev.mkebsi@gmail.com">MKebsi</a>. 
+				After entering it, click on the Done button to see your 
+				page on the main container. 
+			</p><br/>
+			<p class="note">
+				NOTE: All the opened panels have this small x.<br/><br/>
+				<img src="../img/TutImg1.1.jpg" width="100%" id="fig1.1"/><br/><br/>
+				it allows you to close the window without choosing
+				any of the options.
+			</p>
+			<span id="five"></span>
+			
+			<br/><br/><br/>
+			<h3>Step 2: The Viewer</h3>
+			<img src="../img/TutImg2.jpg" width="100%" id="fig2"/>
+			<p class="figsTxt">Figure 2</p><br/>
+			
+			<p>
+				After clicking on the Done button, you will see 
+				your page in the main container as shown in 
+				<a href="#fig2">Figure 2</a>. There, you will 
+				have your web-page inside the violet box 
+				(<a href="#fig2">Number 1</a>).
+			</p>
+			<p>
+				From there, you will be able to change its width 
+				and height as will be described below. There are
+				two containers to hold your page.
+			</p>
+			<ul>
+				<li>
+					The Main Container: is the small, violet box
+					(<a href="#fig2">Number 1</a>). 
+					It holds the page and resize it will effect 
+					the page directly. This one is typically made 
+					to let you control your web-page without 
+					having changes on your view (such as having 
+					a bigger view than your device that can bother
+					you zooming the view) or having a User 
+					Interface (UI) deformations. 
+				</li>
+				<li>
+					The Secondary Container: is the big, blue box
+					(<a href="#fig2">Number 2</a>). 
+					This one allows you to scroll horizontally or 
+					vertically, but it doesn't allow you to zoom in or 
+					out. You can resize this container separately, but
+					it would not effect your page. Instead your view 
+					(browser viewport) will get wider and narrower.
+				</li>
+			</ul>
+			<p>
+				Below the web-page container, there is a small 
+				box called "Page View Type" (<a 
+				href="#fig2">Number 3</a>) which tells you what 
+				is the kind of device your web-page is tested on
+				(whether it's a smart watch, phone, tablet, laptop,
+				or PC monitor). This one helps you determine the
+				device your website needs, and how to make it 
+				better.
+			</p>
+			<span id="six"></span>
+			
+			<br/><br/><br/>
+			<h3>Step 3: Start Resizing and Testing Your Web-page</h3>
+			<img src="../img/TutImg3.jpg" width="100%" id="fig3"/>
+			<p class="figsTxt">Figure 3</p><br/>
+			<p>
+				Looking at <a href="#fig3">Figure 3</a>, you
+				will know that they are two input fields (<a
+				href="#fig3">Number 5</a>). They will control 
+				your page's width (wideness) and height 
+				(tallness). The Secondary Container won't be 
+				effected with the values add to these inputs. 
+				The text next to them (<a href="#fig3">Number 
+				6</a>) tells you which one is the width, and which
+				is the height.
+			</p>
+			<p>
+				The text on the top (<a href="#fig3">Number 4</a>)
+				is the one that tells you which of the containers you 
+				are resizing. Clicking on it won't do anything as it is 
+				only a header (title).
+			</p>
+			<br/>
+			<img src="../img/TutImg4.jpg" width="100%" id="fig4"/>
+			<p class="figsTxt">Figure 4</p><br/>
+			<p>
+				The other ones <a href="#fig4">Figure 4</a> 
+				are nearly the same, but their main purpose is
+				to resize The Secondary Container 
+				(<a href="#fig2">Number 2</a>). Each one can 
+				be used separately, They are, as mentioned before,
+				made for giving the developers the full accessibility
+				to test their web-pages professionally.
+			</p><br/>
+			<p class="note">
+				NOTE: For experts, if you set the width of The
+				Secondary Container the same as the one for The
+				Main Container, you will notice the difference in
+				the size. The Secondary Container is set to be
+				bigger than The Main Container by 8px all around
+				since I add 3px padding and 1px border, there 
+				still only 4px.
+			</p><br/>
+			<img src="../img/TutImg5.jpg" width="100%" id="fig5"/>
+			<p class="figsTxt">Figure 5</p><br/>
+			<p>
+				Sliders (<a href="#fig5">Number 11-12</a>) are so
+				important to test your web-page faster than using 
+				specific numbers. It will help you test your web-page
+				so fast from small watches to huge monitors. 
+			</p><br/>
+			<p class="note">
+				NOTE: As telling a developer, I didn't
+				mention Smart TVs because they will 
+				be equal to monitors. They are the biggest 
+				screens that can run a browser. 
+			</p>
+			<ul>
+				<li>
+					<a href="#fig5">Number 10</a>: is only a title 
+					<a href="#fig3">as mentioned above</a>.
+				</li>
+				<li>
+					<a href="#fig5">Number 11</a>: changes the 
+					width of your web-page.
+				</li>
+				<li>
+					<a href="#fig5">Number 12</a>: changes the 
+					height of your web-page.
+				</li>
+			</ul>
+			<span id="seven"></span>
+			
+			<br/><br/><br/>
+			<h3>Step 4: What Are the Buttons Below?</h3>
+			<img src="../img/TutImg6.jpg" width="100%" id="fig6"/>
+			<p class="figsTxt">Figure 6</p><br/>
+			<p>
+				<a href="#fig6">These buttons</a> are the ones that
+				open the panels which allows you to change the site
+				you are testing (<a href="#fig6"> Number 13</a>), choose
+				a suitable device (<a href="#fig6">Number 14</a>),
+				check your screen's and browser's information (<a href="#fig6">
+				Number 15</a>), convert the sizes (cm, in, or px) 
+				(<a href="#fig6">Number 16</a>), and visit the site 
+				you are testing (<a href="#fig6">Number 17</a>). 
+			</p>
+			<p>
+				Every one of the will open the following...
+			</p>
+			<ul class="spUL">
+				<li>
+					<a href="#fig6">Number 13</a>: will 
+					open the same panel that appears for 
+					the first time. It allows you to change 
+					the site you are working on. <a href="#fig1">
+					The First Figure</a>
+				</li>
+				<li>
+					<img src="../img/TutImg7.jpg" class="liImgs" id="fig7"/>
+					<p class="figsTxt liImg">Figure 7</p><br/>
+					<a href="#fig6">Number 14</a>: will open a panel.
+					In it, a lot of device from small watches to the 
+					biggest laptops available. 
+				</li><br/>
+				<p class="note">
+					NOTE: Monitor and Smart TV are complexly different from one
+					to another, so search for "The viewport of **Your Device**".
+				</p>
+				<li>
+					<img src="../img/TutImg8.jpg" class="liImgs" id="fig8"/>
+					<p class="figsTxt liImg">Figure 8</p><br/>
+					<a href="#fig6">Number 15</a>: will show you a 
+						panel full of useful information about your screen 
+						and browser. They can help you if you understand 
+						them. But don't worry, they are not something
+						important for most people. 
+				</li><br/>
+				<p class="note">
+					NOTE: it may appear something like this...<br/><br/>
+					<img src="../img/TutImg9.jpg" width="100%" id="fig9"/><br/><br/>
+					Its OK, you are able to scroll up and down. 
+					They appear like this if your screen is a 
+					little bit smaller than usual (such as mobiles).
+				</p>
+				<li>
+					<img src="../img/TutImg10.jpg" class="liImgs" id="fig10"/>
+					<p class="figsTxt liImg">Figure 10</p><br/>
+					<a href="#fig6">Number 16</a>: will allow 
+					you to see the physical width and height of 
+					an element and change its properties 
+					(centimeters or inches) to pixel points. 
+					Then you can add the pixels to the site you 
+					are working on.
+				</li>
+			</ul>
+			<span id="eight"></span>
+			
+			<br/><br/><br/>
+			<h2>Conclusion</h2>
+			<p>
+				After all this reading, I can tell you that using 
+				SiZillion is a piece of cake. I put everything 
+				in one single page to make it as simple as possible. 
+				So, if you have any idea, report, feedback, question, 
+				problem, or information, head directly to 
+				<a href="mailto: dev.mkebsi@gmail.com">MKebsi</a> 
+				and ask any thing you want there. I hope a good 
+				time for you using our app. Thanks for you time 
+				and attention.
+			</p>
+			<!--#articleOne-->
+		</div>
+		
+		<!--the Javascript connector tag-->
+		<script src="../js/main.js"></script>
+	</body>
+</html> 

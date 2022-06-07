@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<!--The Head Tag-->
+	<head>
+		<!--the title of the page-->
+		<title>The Main Concepts of SiZillion</title>
+		
+		<!--META Tages-->
+		<meta name="description" content="
+		***The Main Description Goes Here***
+		" />
+		
+		<meta name="keywords" content="
+		***The Main Keywords Go Here***
+		"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#001e22"/>
+		
+		<!--LINK Tages-->
+		<link rel="stylesheet" href="../css/main.css" id="stylesheet" />
+		<link rel="icon" href="../img/logoCubed.png" />
+	</head>
+	
+	<!--the body of the website-->
+	<body onload="Start()">
+		
+		<!--top animated line-->
+		<div class="topLine"></div>
+		
+		<!--navigation bar-->
+		<div class="navBar">
+			<!--the logo-->
+			<a href="index.html">
+				<img src="../img/Shape1.png" class="navLogo" alt="SiZillion Logo"/>
+			</a>
+			<!--the parts title-->
+			<h2 class="title">The Main Concepts</h2>
+			<!--#navBar-->
+		</div>
+		<!--the three dashes-->
+		<div class="dashes" onclick="RightPanel()">
+			<div class="dash" id="dash1"></div>
+			<div class="dash" id="dash2"></div>
+			<div class="dash" id="dash3"></div>
+			<!--#dashes-->
+		</div>
+		
+		<!--the right panel-->
+		<div class="rpOverlay" id="rpOver" onclick="RightPanel()"></div>
+		<div class="rightPanel" id="rPanel" ontouchmove="CMoveAnim()" onmousemove="CMoveAnim()" ontouchend="CAnimEnd()" onmouseout="CAnimEnd()">
+			<div class="navLinksCon">
+				<a href="/docs/Tutorials/">Main Concept</a>
+				<a href="/docs/Tutorials/the-full-manual.html">User Manual</a>
+				<a href="/docs/Terms of Use/">Terms of Use</a>
+				<a href="/docs/Privacy Policy/">Privacy Policy</a>
+				<a href="/docs/Contribution/">Contribution Conditions</a>
+				<!--#navLinksCon ends here-->
+			</div>
+			<!--the animated background made by circles-->
+			<svg id="rpBackContainer">
+				<!--stuck circles-->
+				<circle r="200" cy="50" cx="10" style="fill: #ffffff00; stroke: #26a6ee70; stroke-width: 10px;"/>
+				<circle r="200" cy="500" cx="250" style="fill: #ffffff00; stroke: #00db8c70; stroke-width: 10px;"/>
+				<circle r="200" cy="900" cx="10" style="fill: #ffffff00; stroke: #d066f970; stroke-width: 10px;"/>
+				<circle r="200" cy="1400" cx="250" style="fill: #ffffff00; stroke: #83571a70; stroke-width: 10px;"/>
+				
+				<!--animated main circles-->
+				<g id="circlesBack" transform="translate(125, 200) rotate(0)">
+					<circle id="bigC" r="80" cy="0" cx="0"/>
+					<circle id="sc1" r="30" cy="-90" cx="-65"/>
+					<circle id="sc2" r="30" cy="100" cx="50"/>
+					<circle id="sc3" r="30" cy="30" cx="-30"/>
+					<circle id="sc4" r="30" cy="-80" cx="75"/>
+				</g>
+				<!--the gradient-->
+				<defs>
+					<linearGradient id="mainGrad" x1="0" y1="0" x2="100%" y2="100%">
+						<stop offset="0%" style="stop-color: var(--aq2); stop-opacity: 0.5;"/>
+						<stop offset="100%" style="stop-color: var(--lp2); stop-opacity: 0.5;"/>
+					</linearGradient>
+				</defs>
+			</svg>
+			<!--#rightPanel-->
+		</div>
+		
+		<br/><br/>
+		
+		<!--the main article-->
+		<div class="articleOne">
+			<h1 class="secondaryTitle">What Is the Main Reason to Use SiZillion?</h1>
+			<br/>
+			<!--Table Of Content-->
+			<div class="toc">
+				<p class="tocH"><b>Table of Content</b></p>
+				<ul>
+					<li><a href="#one">What Is SiZillion?</a></li>
+					<li><a href="#two">Who Should Use It?</a></li>
+					<li><a href="#three">Is It Online?</a></li>
+					<li id="one"><a href="#four">Who Made It?</a></li>
+				</ul>
+			</div>
+			<br/>
+			<h2 >What Is SiZillion?</h2>
+			<p>
+				SiZillion is one of the best testing tools. It allows website
+				developers to <i>test their web-pages on multiple devices.</i>
+				This tool gives you the full ability to make responsive 
+				websites and check it on nearly all the devices.
+			</p>
+			
+			<br/><br/><br/>
+			<img src="../img/panel.png" width="100%" alt="the main panels of SiZillion"/>
+			<p>
+				Using this tool, you will be able to load your
+				web-page into the main panel and test it in there.
+				you can see the type of device you are working on 
+				on the small bar on the left.
+			</p>
+			
+			<br/><br/><br/>
+			<img src="../img/mainFrame.png" width="100%" alt="the width and height text inputs"/>
+			<p>
+				You have <i>custom data inputs where you can add your 
+				own width and height</i>&nbsp; to your web-page. You can also
+				make sure about the device type (whether it's laptop or another 
+				device) in the small box under the page. 
+			</p>
+			
+			<br/><br/><br/>
+			<img src="../img/sliders.png" width="100%" alt="the testing sliders for any page at SiZillion"/>
+			<p id="two">
+				With all the abilities mentioned above, you have
+				additional <i>sliders that change the the size, too.</i>
+				This will let you make sure about most devices manually. 
+			</p>
+			
+			<br/><br/><br/>
+			<h2 >Who Should Use It?</h2>
+			<p>
+				It's nearly a tool that <i>all developers need in their
+				daily workflow</i>. It's acceptable for experts in this
+				industry, and the other ones who already started 
+				with responsive website development.
+			</p>
+			<br/>
+			<p>
+				With dark colors all around the app,
+				it is easy to use it in low light room because this
+				tool have a dark stable colors that never bother
+				the eyes.
+			</p>
+			<br/>
+			<p>
+				The simplicity is our first goal that is why I
+				made this app. It has a <i>simple interface with
+				lots of useful inputs and panels</i>. There are some
+				other extra things around the app, and I gave
+				you all the abilities to do what is best for you.
+			</p>
+			<br/>
+			<p>
+				About the device requirements, there are no special
+				requirements. It only needs a new web browser(with
+				no spacial version, just 2020 or higher not to find
+				unexpected things in the user interface). This can
+				work in nearly all the browsers, and it's better to 
+				<i>use Google Chrome or Firefox</i>. 
+			</p>
+			<span id="three"></span>
+			
+			<br/><br/><br/>
+			<h2 >Is It Online?</h2>
+			<p>
+				On most cases, people have network connected 
+				anytime anywhere, so <i>we provide it online</i>.
+				You can check your web-pages if they are stored in
+				your device or uploaded online.
+			</p>
+			<br/>
+			<p>
+				This can be a great thing for some, but there are
+				others who find it difficult to went to Google and
+				search every time they want some thing. I were
+				able to put this app as an open source website.
+				Which means that <i>we provide it offline for the ones
+				who need it</i>. You can find the link to its repository 
+				down in the copyrights at the bottom.
+			</p>
+			<span id="four"></span>
+			
+			<br/><br/><br/>
+			<h2 >Who Made It and Why?</h2>
+			<p>
+				It was first made for a personal use, and it
+				developed till it reached another level. Then
+				the owner decided to share it with his friends to
+				have rates from the them.
+			</p>
+			<br/>
+			<p>
+				It was a simple one, but after that, he made it
+				better and open source, and thats what are you
+				seeing now. <i>It still not fully completed app, so if 
+				you have anything to say, feel free to contact 
+				<a href="mailto:dev.mkebsi@gmail.com">MKebsi (the owner)</a></i>.
+				We are waiting for your feedbacks. Don't feel shy at
+				all. Send thanks, critical, feedback, or a problem report
+				email, and I will try to respond as soon as possible.
+			</p>
+			<br/>
+			<h3>The Owner Info</h3>
+			<p>
+				Website: <a href="https://mrkebsi.github.io/">Mrkebsi.github.io</a><br/>
+				E-mail: <a href="mailto: dev.mkebsi@gmail.com">dev.mkebsi@gmail.com</a><br/>
+				Linkedin: <a hrerf="https://linkedin.com/in/mkebsi">https://linkedin.com/in/mkebsi</a><br/>
+				Dribbble: <a href="http://dribbble.com/mkebsi">@MKebsi</a><br/>
+				Github: <a href="https://github.com/mrkebsi">Github.com/MrKebsi</a><br/>
+				Twitter: <a href="https://twitter.com/mrkebsi">@MrKebsi</a><br/>
+				Instagram: <a href="https://instagram.com/mrkebsi">@MrKebsi</a><br/>
+			</p>
+			<!--#articleOne-->
+		</div>
+		
+		<!--the Javascript connector tag-->
+		<script src="../js/main.js"></script>
+	</body>
+</html> 
