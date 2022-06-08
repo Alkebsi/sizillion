@@ -1,0 +1,344 @@
+/*
+
+This file contain the Dark theme of the docs as the main
+theme.
+
+The Colors Used In This Site Are...
+
+- Aqua - rgb(80, 228, 196) - #4fe3c3 aq,
+- Dark Purple - rgb(92, 0, 196) - #5c00c4 dp,
+- Light Purple - rgb(175, 0, 187) - #af00bb lp,
+- Light Gray - rgb(58, 58, 58) - #3a3a3a lg,
+- Dark Gray - rgb(16. 16, 16) - #101010 dg, and
+- Black - rgb(0, 0, 0) - #000000 black.
+
+*/
+
+/* Files importation */
+@import url("../../css/animations.css");
+
+/*
+General site styling
+
+Site Colors
+*/
+:root
+{
+	--aq: #4fe3c3;
+	--aq2: #91eeda;
+	--dp: #5c00c4;
+	--lp: #af00bb;
+	--lp2: #f566ff;
+	--lg: #3a3a3a;
+	--dg: #101010;
+}
+
+/*Hyperlinks*/
+a
+{
+	text-decoration: none;
+	color: var(--aq2);
+	line-height: 1.4;
+}
+a.active, a:hover
+{
+	color: var(--lp2); 
+}
+
+/*Fonts*/
+@font-face
+{
+	font-family: light;
+	src: url("../fonts/Cairo-Light.ttf");
+}
+@font-face
+{
+	font-family: bold;
+	src: url("../fonts/Stanley.ttf");
+}
+
+/*Everything*/
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: light;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+/*The Body*/
+body
+{
+	background: var(--dg);
+	color: #fff;
+}
+
+/*Main Titles*/
+h1, h2, h3, h4, h5, h6, .bold, b
+{
+	font-family: bold;
+	background-image: linear-gradient(to bottom right, var(--lp2), var(--aq2), var(--lp2));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 4px;
+}
+
+/*Paragraphs*/
+p
+{
+	line-height: 21px;
+	padding: 0 10px;
+}
+
+/*top animated line*/
+.topLine
+{
+	z-index: 99;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to left, var(--aq), var(--dp), var(--dg), var(--dp), var(--aq));
+	background-position: 0 0;
+	animation: topLineAnim 2s ease-out infinite; 
+}
+
+/*Navigation Bar*/
+.navBar
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: var(--dg);
+	border-bottom: 2px solid var(--aq);
+	border-radius: 0 0 30px 30px;
+}
+.navLogo
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 5px 0 0 25px;
+	height: 40px;
+}
+.title
+{
+	text-align: center;
+	padding: 10px 0 0 20px;
+}
+.dashes
+{
+	position: fixed; 
+	top: 0;
+	right: 0;
+	margin: 7px 20px 0 0;
+	width: 30px;
+	transition: 1s;
+	z-index: 99;
+}
+.dash
+{
+	width: 100%;
+	height: 5px;
+	background: linear-gradient(45deg, var(--aq2) 30%, var(--lp2) 90%); 
+	margin: 4px 0;
+	border-radius: 20px;
+	transition: all 0.5s;
+}
+
+/*the right panel*/
+.rpOverlay
+{
+	position: fixed;
+	right: -100vw;
+	top: 0;
+	width: 100%;
+	height: 110%;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 97;
+	transition: all 0.3s;
+}
+.rightPanel
+{
+	position: fixed;
+	right: -100vw;
+	top: 0;
+	width: 250px;
+	border-left: 2px solid var(--aq);
+	height: 110%;
+	background: var(--dg);
+	transition: all 0.7s;
+	z-index: 98;
+}
+/*the links*/
+.navLinksCon
+{
+	position: absolute; 
+	width: 100%;
+	top: 50%;
+	transform: translate(0, -50%);
+	margin: 45px 0 0;
+}
+.navLinksCon a
+{
+	display: block; 
+	margin: 10px;
+	padding: 5px 10px;
+	font-weight: bold;
+	border-radius: 20px;
+	border: 1px solid var(--aq);
+}
+/*the circles background*/
+#rpBackContainer
+{
+	width: 250px;
+	height: 100%;
+}
+#bigC
+{
+	fill: #ffffff00;
+	stroke: url("#mainGrad");
+	stroke-width: 20px;
+}
+#sc1
+{
+	fill: #08878370;
+	stroke: url("#mainGrad");
+	stroke-width: 5px;
+}
+#sc2
+{
+	fill: #fe6aff70;
+	stroke: url("#mainGrad");
+	stroke-width: 5px;
+}
+#sc3
+{
+	fill: #6bff7d70;
+	stroke: url("#mainGrad");
+	stroke-width: 5px;
+}
+#sc4
+{
+	fill: #f9ec0f70;
+	stroke: url("#mainGrad");
+	stroke-width: 5px;
+}
+circle
+{
+	transition: 1000;
+}
+
+/*the article style*/
+.articleOne
+{
+	padding: 5px 150px;
+	margin: 5px;
+}
+.secondaryTitle
+{
+	text-align: center;
+}
+.toc
+{
+	width: 100%;
+	border-radius: 20px;
+	padding: 4px;
+	background: linear-gradient(210deg, var(--aq), var(--lp));
+}
+.tocH
+{
+	background: var(--dg);
+	padding: 20px 0;
+	border-radius: 20px 20px 0 0;
+	text-align: center;
+	font-size: 2em;
+	margin-bottom: 2px;
+}
+.toc ul
+{
+	padding: 20px;
+	background: var(--dg);
+	border-radius: 0 0 20px 20px;
+}
+ul
+{
+	padding: 25px;
+	list-style-position: inside; 
+	list-style-type: none;
+}
+.toc li a
+{
+	font-family: bold;
+	font-size: 1.5em;
+}
+li::before
+{
+	content: "O";
+	font-size: 1.5em;
+	font-family: bold;
+	background-image: linear-gradient(45deg, var(--lp2) 30%, var(--aq2) 60%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 10px 10px 10px 0;
+}
+li
+{
+	line-height: 21px;
+	margin: 10px 0;
+}
+
+/*the full manual specialist part*/
+/*figure's small text*/
+.figsTxt
+{
+	color: var(--aq2);
+	margin-left: 20px;
+	font-family: bold;
+}
+.note
+{
+	color: var(--aq);
+	border-left: 10px solid var(--aq);
+	border-top: 1px solid var(--aq);
+	border-bottom: 1px solid var(--aq);
+	border-radius: 0 20px 20px 0;
+	padding: 15px;
+	margin: 0 10px;
+}
+.liImgs
+{
+	width: 70%;
+	margin: 20px 15%;
+}
+.spUL
+{
+	padding: 15px;
+}
+.spUL li
+{
+	margin: 60px auto 10px;
+	border-right: 2px solid var(--aq);
+	border-left: 2px solid var(--aq);
+	border-radius: 20px;
+	padding: 20px;
+}
+.spUL li::before
+{
+	content: none;
+	padding: 0;
+	margin: 0;
+	width: 0;
+	background:#fff;
+}
+@media screen and (max-width: 900px)
+{
+	.articleOne
+	{
+		padding: 5px 10px;
+	}
+}
