@@ -32,10 +32,10 @@ First, I obviously respect your experience and your efforts, but you should see 
 By reading this part, I hope you are able now to contribute and share your experience and knowledge to the world. I am trying to make everything simple, but the laws stay laws, so please follow them. If you have any trouble with one of the points above, contact me and I will try to solve it together. I really appreciate your support, time, and attention. See you soon developer.
 
 ## Contact Details
-**Website: [Mrkebsi.github.io](https://mrkebsi.github.io/)
-E-mail: [dev.mkebsi@gmail.com](mailto: dev.mkebsi@gmail.com)
-Linkedin: [Mohammed Alkebsi](https://linkedin.com/in/mkebsi)
-Dribbble: [@MKebsi](https://dribbble.com/mkebsi)
-Github: [@MrKebsi](https://github.com/mrkebsi)
-Twitter: [@MrKebsi](https://twitter.com/mrkebsi)
+**Website: [Mrkebsi.github.io](https://mrkebsi.github.io/)<br>
+E-mail: dev.mkebsi@gmail.com<br>
+Linkedin: [Mohammed Alkebsi](https://linkedin.com/in/mkebsi)<br>
+Dribbble: [@MKebsi](https://dribbble.com/mkebsi)<br>
+Github: [@MrKebsi](https://github.com/mrkebsi)<br>
+Twitter: [@MrKebsi](https://twitter.com/mrkebsi)<br>
 Instagram: [@MrKebsi](https://instagram.com/mrkebsi)**
