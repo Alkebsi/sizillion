@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<!--The Head Tag-->
+	<head>
+		<!--the title of the page-->
+		<title>Terms of Use - SiZillion</title>
+		
+		<!--META Tages-->
+		<meta name="description" content="
+		***The Main Description Goes Here***
+		" />
+		
+		<meta name="keywords" content="
+		***The Main Keywords Go Here***
+		"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#001e22"/>
+		
+		<!--LINK Tages-->
+		<link rel="stylesheet" href="../css/main.css" id="stylesheet" />
+		<link rel="icon" href="../img/logoCubed.png" />
+	</head>
+	
+	<!--the body of the website-->
+	<body onload="Start()">
+		
+		<!--top animated line-->
+		<div class="topLine"></div>
+		
+		<!--navigation bar-->
+		<div class="navBar">
+			<!--the logo-->
+			<a href="index.html">
+				<img src="../img/Shape1.png" class="navLogo" alt="SiZillion Logo"/>
+			</a>
+			<!--the parts title-->
+			<h2 class="title">Terms of Use</h2>
+			<!--#navBar-->
+		</div>
+		<!--the three dashes-->
+		<div class="dashes" onclick="RightPanel()">
+			<div class="dash" id="dash1"></div>
+			<div class="dash" id="dash2"></div>
+			<div class="dash" id="dash3"></div>
+			<!--#dashes-->
+		</div>
+		
+		<!--the right panel-->
+		<div class="rpOverlay" id="rpOver" onclick="RightPanel()" onmouseover="RightPanel()" ontouchstart="RightPanel()" ></div>
+		<div class="rightPanel" id="rPanel" ontouchmove="CMoveAnim()" onmousemove="CMoveAnim()" ontouchend="CAnimEnd()" onmouseout="CAnimEnd()">
+			<div class="navLinksCon">
+				<a href="/docs/Tutorials/">Main Concept</a>
+				<a href="/docs/Tutorials/the-full-manual.html">User Manual</a>
+				<a href="/docs/Terms of Use/">Terms of Use</a>
+				<a href="/docs/Privacy Policy/">Privacy Policy</a>
+				<a href="/docs/Contribution/">Contribution Conditions</a>
+				<!--#navLinksCon ends here-->
+			</div>
+			<!--the animated background made by circles-->
+			<svg id="rpBackContainer">
+				<!--stuck circles-->
+				<circle r="200" cy="50" cx="10" style="fill: #ffffff00; stroke: #26a6ee70; stroke-width: 10px;"/>
+				<circle r="200" cy="500" cx="250" style="fill: #ffffff00; stroke: #00db8c70; stroke-width: 10px;"/>
+				<circle r="200" cy="900" cx="10" style="fill: #ffffff00; stroke: #d066f970; stroke-width: 10px;"/>
+				<circle r="200" cy="1400" cx="250" style="fill: #ffffff00; stroke: #83571a70; stroke-width: 10px;"/>
+				
+				<!--animated main circles-->
+				<g id="circlesBack" transform="translate(125, 200) rotate(0)">
+					<circle id="bigC" r="80" cy="0" cx="0"/>
+					<circle id="sc1" r="30" cy="-90" cx="-65"/>
+					<circle id="sc2" r="30" cy="100" cx="50"/>
+					<circle id="sc3" r="30" cy="30" cx="-30"/>
+					<circle id="sc4" r="30" cy="-80" cx="75"/>
+				</g>
+				<!--the gradient-->
+				<defs>
+					<linearGradient id="mainGrad" x1="0" y1="0" x2="100%" y2="100%">
+						<stop offset="0%" style="stop-color: var(--aq2); stop-opacity: 0.5;"/>
+						<stop offset="100%" style="stop-color: var(--lp2); stop-opacity: 0.5;"/>
+					</linearGradient>
+				</defs>
+			</svg>
+			<!--#rightPanel-->
+		</div>
+		
+		<br/><br/>
+		
+		<!--the main article-->
+		<div class="articleOne">
+			<h1 class="secondaryTitle">How Should You Use SiZillion?</h1>
+			<br/>
+			<!--Table Of Content-->
+			<div class="toc">
+				<p class="tocH"><b>Table of Content</b></p>
+				<ul>
+					<li><a href="#one">Overview</a></li>
+					<li><a href="#two">Why I Have Such Terms?</a></li>
+					<li><a href="#three">We Are Trying to Make It Simple as Possible</a></li>
+					<li><a href="#four">The Most Important Terms</a></li>
+					<li><a href="#five">Are You Afraid of Your Personal Information?</a></li>
+					<li><a href="#six">Conclusion</a></li>
+					<li id="one"><a href="#seven">Contact Details</a></li>
+				</ul>
+			</div>
+			<br/>
+			
+			<h2>Overview</h2>
+			<p>
+				Terms of Use is telling you to use the app in 
+				specific conditions, and if you did any illegal 
+				thing, I won't be responsible of any bad 
+				results or lawful issues. 
+			</p>
+			<br/>
+			<p class="note">
+				NOTE: By using the app, you are agree to 
+				follow these rule. If you have any problem 
+				with some points, please stop using the 
+				app and <a href="#seven" style="color: var(--lp2)">contact us</a> 
+				to let me help you.
+			</p>
+			<span id="two"></span>
+			
+			<br/><br/><br/>
+			<h2>Why I Have Such Terms?</h2>
+			<p>
+				Those terms should be followed not to have some 
+				illegal activities with the open source projects. 
+				Our terms may be special, so please read it all 
+				if you are going to use the app. Otherwise, <i>you 
+				will be the responsible of any illegal thing you did.</i>
+			</p>
+			<span id="three"></span>
+			
+			<br/><br/><br/>
+			<h2>We Are Trying to Make It Simple as Possible</h2>
+			<p>
+				With all of my efforts to make these terms simple, 
+				we were forced to write all these terms. I hope 
+				you understand my care for both (we and you). Please 
+				keep on reading.
+			</p>
+			<br/>
+			<p class="note">
+				NOTE: All these terms are connected to your way 
+				of using my application. Copyrights are so simple. 
+				You can check them at the bottom of this page.
+			</p>
+			<span id="four"></span>
+			
+			<br/><br/><br/>
+			<h1 align="center">The Most Important Terms</h1>
+			<p>
+				By now, I will describe for you what you are able
+				to do, and what you can't do. The ideas here are 
+				well described as I hope. If you have any problem 
+				with any of these ones, feel free to contact me using
+				the information below in the 
+				<a href="#seven">contact details section.</a>
+			</p>
+			<br/>
+			<h2>You are able to do the following...</h2>
+			<ul>
+				<li>
+					<b>Report a Problem:</b> You can report a 
+					problem any time, but only if you checked your 
+					web-page first. Never complain while your device
+					or website have the problem.
+				</li>
+				<li>
+					<b>Sent an Idea:</b> If you have a great 
+					idea that can upgrade the application, you are
+					freely able to send an e-mail describing your idea. 
+					If you can make it yourself, try to contribute at 
+					<a href="https://github.com/mrkebsi/sizillion/">the 
+					project repo,</a> but check the 
+					<a href="../Contribution/index.html"> Contribution
+					Conditions</a> first.
+				</li>
+				<li>
+					<b>Ask a Question:</b> You can ask me any question 
+					in case it is related to SiZillione, web development, or 
+					any thing connected to 
+					<a href="https://github.com/mrkebsi">MKebsi's interests.</a>
+				</li>
+				<li>
+					<b>Search About or Add an Information:</b> you can 
+					ask about a specific information about SiZillion or
+					<a href="https://github.com/mrkebsi">MKebsi's 
+					interests</a>alone. Moreover, you can send any extra 
+					information you have to help me keep on 
+					developing my apps.
+				</li>
+				<li>
+					<b>Contribute:</b> If you are a developer, I will be
+					so glad having your contribution. But please read the 
+					<a href="../Contribution/"> Contribution
+					Conditions</a> before starting as I don't want to 
+					let you write many lines of code and then 
+					accept only the half!
+				</li>
+				<li>
+					<b>Post Issues at Github:</b> If you have a trouble 
+					with the site, you can post your issue at Github, but 
+					before posting it, check your website since it could
+					have the problem. 
+				</li>
+				<li>
+					<b>Share the Open Source Projects:</b> You are fully 
+					allowed to share the application with your friends at
+					Facebook, WhatsApp, Instagram, and all other social 
+					media platforms. Mostly try to share the Github link
+					and not the download file because I may change 
+					some terms, copyrights, contribution conditions, or 
+					other things.
+				</li>
+			</ul>
+			
+			<h2>You are not allowed to do the following...</h2>
+			<ul>
+				<li>
+					<b>Say I Toke Your Files:</b> You can't say that 
+					we toke some of your personal information since my 
+					project is called "Static Website" which means that
+					you are protected for Github. You can check 
+					"Github's Privacy Policy" to be sure about you 
+					personal files.
+				</li>
+				<li>
+					<b>Say I Changed Your Website:</b> Also this 
+					point is so important. I only made this app to let 
+					you test your site, not to change it. So, if any thing 
+					have been changed in you website, please make sure 
+					about the other  tools (including web builders like
+					wordpress, speed testing tools, and other auto 
+					testing tools).
+				</li>
+				<li>
+					<b>Say I Are Monitoring You:</b> All these things
+					are not acceptable to be used while uploading the 
+					website to Github. So, if there is something you want
+					to check more, visit my Privacy Policy page to see 
+					your rights.
+				</li>
+				<li>
+					<b>Upload Viruses:</b> Testing cracked or stolen 
+					templates can drive bugs and viruses to the app. 
+					Never post or mail anything if you haven't make sure 
+					about the project.
+				</li>
+				<li>
+					<b>Testing Others Projects:</b> If you didn't own the
+					project, you are not allowed to send any reports or
+					post any issues because you didn't make the website
+					yourself. You are allowed to test other websites, but 
+					you can't report a problem.
+				</li>
+			</ul>
+			<span id="five"></span>
+			
+			<br/><br/><br/>
+			<h2>Are You Afraid of Your Personal Information?</h2>
+			<p>
+				We can tell you are fully protected from SiZillion and
+				also from Github. Being offline or online doesn't 
+				mean I are tracking you or having your projects 
+				with us. If you are not completely satisfied, you can 
+				read more in the Privacy Policy page.
+			</p>
+			<span id="six"></span>
+			
+			<br/><br/><br/>
+			<h2>Conclusion</h2>
+			<h3>Thank You For Reading</h3>
+			<p>
+				We are so happy that you read all the conditions till
+				now. I hope you follow them and not to make any 
+				mistakes all the way using SiZillion.
+			</p>
+			<br/>
+			<p class="note">
+				Also now telling you. If you use SiZillion that means
+				you are agree to all the conditions mentioned 
+				above. If not, please contact me using the information 
+				provided below to help you, and I can clarify the 
+				points if you couldn't understand them well.
+			</p>
+			<br/>
+			<h3>Be Aware</h3>
+			<p>
+				Please don't make anything that can hurt me and 
+				you. Being able to understand the points above will 
+				really help. Any trouble with one of them should be 
+				fixed as soon as possible, so please contact me to 
+				tell me as fast as possible to help me and the others,
+				too.
+			</p>
+			<br/>
+			<p>We hope a good time for you using my app.</p>
+			<span id="seven"></span>
+			
+			<br/><br/><br/>
+			<h2>Contact Details</h2>
+			<p>
+				Website: <a href="https://mrkebsi.github.io/">Mrkebsi.github.io</a><br/>
+				E-mail: <a href="mailto: dev.mkebsi@gmail.com">dev.mkebsi@gmail.com</a><br/>
+				Linkedin: <a hrerf="https://linkedin.com/in/mkebsi">https://linkedin.com/in/mkebsi</a><br/>
+				Dribbble: <a href="http://dribbble.com/mkebsi">@MKebsi</a><br/>
+				Github: <a href="https://github.com/mrkebsi">Github.com/MrKebsi</a><br/>
+				Twitter: <a href="https://twitter.com/mrkebsi">@MrKebsi</a><br/>
+				Instagram: <a href="https://instagram.com/mrkebsi">@MrKebsi</a><br/>
+			</p>
+			<!--#articleOne-->
+		</div>
+		
+		<!--the Javascript connector tag-->
+		<script src="../js/main.js"></script>
+	</body>
+</html> 
