@@ -25,10 +25,10 @@ By now, I will describe for you what you are able to do, and what you can't do. 
 
 ### You are able to do the following...
 - Report a Problem: You can report a problem any time, but only if you checked your web-page first. Never complain while your device or website have the problem.
-- Sent an Idea: If you have a great idea that can upgrade the application, you are freely able to send an e-mail describing your idea. If you can make it yourself, try to contribute at the [project repo](https://github.com/mrkebsi/sizillion/), but check the [Contribution Conditions](somelink) first.
+- Sent an Idea: If you have a great idea that can upgrade the application, you are freely able to send an e-mail describing your idea. If you can make it yourself, try to contribute at the [project repo](https://github.com/mrkebsi/sizillion/), but check the [Contribution Conditions](https://github.com/MrKebsi/SiZillion/blob/1905892cd62aacd5ade6349de0d8636d3d8babe6/docs/Contributions/Contribution%20Conditions.md) first.
 - Ask a Question: You can ask me any question in case it is related to SiZillione, web development, or any thing connected to [MKebsi's interests](https://github.com/mrkebsi).
 - Search About or Add an Information: you can ask about a specific information about SiZillion. Moreover, you can send any extra information you have to help me keep on developing my apps.
-- Contribute: If you are a developer, I will be so glad having your contribution. But please read the [Contribution Conditions](somelink) before starting as I don't want to let you write many lines of code and then accept only the half!
+- Contribute: If you are a developer, I will be so glad having your contribution. But please read the [Contribution Conditions](https://github.com/MrKebsi/SiZillion/blob/1905892cd62aacd5ade6349de0d8636d3d8babe6/docs/Contributions/Contribution%20Conditions.md) before starting as I don't want to let you write many lines of code and then accept only the half!
 - Post Issues at [Github](https://www.github.com): If you have a trouble with the site, you can post your issue at Github, but before posting it, check your website since it could have the problem. 
 - Share the Open Source Projects: You are fully allowed to share the application with anyone anywhere.
 
@@ -56,10 +56,10 @@ We hope a good time for you using my app.
 Please don't make anything that can hurt me and you. Being able to understand the points above will really help. Any trouble with one of them should be fixed as soon as possible, so please contact me to tell me as fast as possible to help me and the others, too.
 
 # Contact Details
-**Website: [Mrkebsi.github.io](https://mrkebsi.github.io/)
-E-mail: [dev.mkebsi@gmail.com](mailto: dev.mkebsi@gmail.com)
-Linkedin: [Mohammed Alkebsi](https://linkedin.com/in/mkebsi)
-Dribbble: [@MKebsi](https://dribbble.com/mkebsi)
-Github: [@MrKebsi](https://github.com/mrkebsi)
-Twitter: [@MrKebsi](https://twitter.com/mrkebsi)
+**Website: [Mrkebsi.github.io](https://mrkebsi.github.io/)<br> 
+E-mail: dev.mkebsi@gmail.com<br> 
+Linkedin: [Mohammed Alkebsi](https://linkedin.com/in/mkebsi)<br> 
+Dribbble: [@MKebsi](https://dribbble.com/mkebsi)<br> 
+Github: [@MrKebsi](https://github.com/mrkebsi)<br> 
+Twitter: [@MrKebsi](https://twitter.com/mrkebsi)<br> 
 Instagram: [@MrKebsi](https://instagram.com/mrkebsi)**
