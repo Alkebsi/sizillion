@@ -31,10 +31,10 @@ All the information mentioned here may be changed anytime. I are telling you tha
 At the end, I are so glad that you read my efforts with your patience. Thanks for your time and attention. I hope you will have a great moments using my project. I will be pleased hearing your feedbacks, ideas, reports, or any thing you are interested in. You can contact me on the information provided below. 
 
 # Contact Details
-**Website: [Mrkebsi.github.io](https://mrkebsi.github.io/)
-E-mail: [dev.mkebsi@gmail.com](mailto: dev.mkebsi@gmail.com)
-Linkedin: [Mohammed Alkebsi](https://linkedin.com/in/mkebsi)
-Dribbble: [@MKebsi](https://dribbble.com/mkebsi)
-Github: [@MrKebsi](https://github.com/mrkebsi)
-Twitter: [@MrKebsi](https://twitter.com/mrkebsi)
+**Website: [Mrkebsi.github.io](https://mrkebsi.github.io/)<br> 
+E-mail: dev.mkebsi@gmail.com<br> 
+Linkedin: [Mohammed Alkebsi](https://linkedin.com/in/mkebsi)<br> 
+Dribbble: [@MKebsi](https://dribbble.com/mkebsi)<br> 
+Github: [@MrKebsi](https://github.com/mrkebsi)<br> 
+Twitter: [@MrKebsi](https://twitter.com/mrkebsi)<br> 
 Instagram: [@MrKebsi](https://instagram.com/mrkebsi)**
